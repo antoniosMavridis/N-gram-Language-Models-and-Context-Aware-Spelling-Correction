@@ -4,6 +4,11 @@ This repository contains an assignment for the **Text Analytics** course, part o
 
 In addition, the assignment involves evaluating the models and corrector on test data, calculating Word Error Rate (WER) and Character Error Rate (CER). Detailed steps for training, testing, and evaluating the models are outlined below, along with the corresponding code implementations.
 
+The project is organized into two main sections:
+
+- Source_Code folder: This folder contains the source code for the assignment.
+- Report.pdf: This PDF file contains screenshots and explanations of every part of the assignment.
+
 ---
 
 ## 2. [Optional] 
@@ -29,7 +34,7 @@ In addition, the assignment involves evaluating the models and corrector on test
 ### 3.2. Cross-Entropy and Perplexity
 - **Task (ii)**: Estimate the **language cross-entropy** and **perplexity** of your two models on a test subset of the corpus, treating the entire test subset as a single sequence of sentences, with `*start*` (or `*start1*`, `*start2*`) at the beginning of each sentence, and `*end*` at the end of each sentence.
 
-- **Exclusion of Start Tokens**: Do not include probabilities of the form $P(*start* | \dots)$ or $P(*start1* | \dots), P(*start2* | \dots)$ in the computation of cross-entropy and perplexity, since we are not predicting the start pseudo-tokens. However, do include probabilities of the form $P(*end* | \dots)$, since we do want to be able to predict if a word will be the last one of a sentence.
+- **Exclusion of Start Tokens**: Do not include probabilities of the form $P(start | \dots)$ or $P(start1 | \dots)$, $P(start2 | \dots)$ in the computation of cross-entropy and perplexity, since we are not predicting the start pseudo-tokens. However, do include probabilities of the form $P(*end* | \dots)$, since we do want to be able to predict if a word will be the last one of a sentence.
 
 - **Length Counting**: You must also count `*end*` tokens (but not `*start*`, `*start1*`, `*start2*`) in the total length $N$ of the test corpus.
 
